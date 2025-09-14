@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Plant Manager - Home</title>
+     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+</head>
+<body>
+    <div class="container">
+    <h2>Welcome {{ user.first_name }} {{ user.last_name }}!</h2>
+    </div>
+
+    <div class="button-group">
+        <a href="/add" class="btn">Add a Plant</a>
+        <a href="/profile" class="btn btn-yellow">View Profile</a>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Plant Name</th>
+                <th>Plant Type</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for plant in plants %}
+            <tr>
+                <td>{{ plant.id }}</td>
+                <td>{{ plant.plant_name }}</td>
+                <td>{{ plant.plant_type }}</td>
+
+                <td>
+                    <a href="/view/{{ plant.id }}" class="btn btn-blue">View</a>
+                    <a href="/edit/{{ plant.id }}" class="btn btn-blue">Update</a>
+                    <a href="/delete/{{ plant.id }}" class="btn btn-blue">Delete</a>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+
+    <div class="logout">
+        <a href="/logout" class="btn btn-red">Logout</a>
+    </div>
+
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Plant Manager - View</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='view.css') }}">
+</head>
+<body>
+<div class="container">
+    <h1>Plant Details</h1>
+    <p><h2>{{ plant.plant_name }} - {{ plant.plant_type }}</h2></p>
+
+    <p><strong>Tools and Materials:</strong> {{ plant.tools_and_materials }}</p>
+    <p><strong>Plant Components:</strong> {{ plant.plants_component }}</p>
+    <p><strong>Procedure:</strong> {{ plant.procedure }}</p>
+
+    <a href="/home" class="home-link">Back to Home</a>
+</div>
+    
+</body>
+</html>

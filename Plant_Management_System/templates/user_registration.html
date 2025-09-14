@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register User</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='registration.css') }}">
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <section>
+      <div class="form-box">
+        <form action="/register" method="POST">
+          <h2>Register Here!</h2>
+
+          {% with messages = get_flashed_messages(category_filter=["register_error", "register_success"]) %}
+            {% if messages %}
+              <ul>
+                {% for message in messages %}
+                  <li>{{ message }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+          {% endwith %}
+
+          <div class="inputbox">
+            <ion-icon name="person-outline"></ion-icon>
+            <input type="text" name="last_name" required>
+            <label>Last Name</label>
+          </div>
+
+          <div class="inputbox">
+            <ion-icon name="person-outline"></ion-icon>
+            <input type="text" name="first_name" required>
+            <label>First Name</label>
+          </div>
+
+          <div class="inputbox">
+            <ion-icon name="mail-outline"></ion-icon>
+            <input type="email" name="email" required>
+            <label>Email</label>
+          </div>
+
+          <div class="inputbox">
+            <ion-icon name="at-outline"></ion-icon>
+            <input type="text" name="username" minlength="8" maxlength="8" required>
+            <label>Username</label>
+          </div>
+
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" name="password" minlength="8" maxlength="8" required>
+            <label>Password</label>
+          </div>
+
+          <div class="inputbox">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <input type="password" name="confirm_password" required>
+            <label>Confirm Password</label>
+          </div>
+
+          <!-- Fixed button group -->
+          <div class="button-group">
+            <button type="submit">Register</button>
+            <button type="reset">Reset</button>
+          </div>
+
+          <div class="register">
+            <p><a href="/login">Return to Login Page</a></p>
+          </div>
+        </form>
+      </div>
+    </section>
+</body>
+</html>

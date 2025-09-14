@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Profile</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='Profile.css') }}">
+</head>
+<body>
+    <div class="profile-container">
+        <h1>My Profile</h1>
+        
+        {% with messages = get_flashed_messages(category_filter=["profile_error", "profile_success"]) %}
+            {% if messages %}
+                <ul class="flash-messages">
+                    {% for message in messages %}
+                        <li>{{ message }}</li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        {% endwith %}
+
+        <form action="/update_profile" method="POST" class="profile-form">
+    
+            <div class="form-group">
+                <label>Last Name:</label>
+                <input type="text" name="last_name" value="{{ user.last_name }}" required>
+            </div>
+
+            <div class="form-group">
+                <label>First Name:</label>
+                <input type="text" name="first_name" value="{{ user.first_name }}" required>
+            </div>
+
+            <div class="form-group">
+                <label>E-Mail Address:</label>
+                <input type="email" name="email" value="{{ user.email }}" required>
+            </div>
+
+            <div class="form-group">
+                <label>Username:</label>
+                <input type="text" name="username" value="{{ user.username }}" minlength="8" required>
+            </div>
+
+        
+            <div class="form-group">
+                <label>Current Password:</label>
+                <input type="password" name="current_password" value="••••••••" readonly>
+             
+            </div>
+
+            <div class="form-group">
+                <label>New Password :</label>
+                <input type="password" name="new_password" placeholder="Enter new password" minlength="8" maxlength="8">
+            </div>
+
+            <div class="form-group">
+                <label>Confirm New Password:</label>
+                <input type="password" name="confirm_password" placeholder="Confirm new password" minlength="8" maxlength="8">
+            </div>
+
+            <div class="form-actions">
+                <button type="submit" class="btn btn-update">Update Profile</button>
+                <button type="reset" class="btn btn-reset">Reset</button>
+            </div>
+        </form>
+
+        <a href="/home" class="home-link">Return to Homepage</a>
+    </div>
+
+   
+</body>
+</html>

@@ -1,0 +1,132 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://help.gardeningexpress.co.uk/wp-content/uploads/2023/04/Untitled-design-1-1024x576.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+
+.profile-container {
+    background: rgba(0, 0, 0, 0.3);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    padding: 40px 30px;
+    width: 500px;
+    margin: 60px auto;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.profile-container h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+.flash-messages {
+    list-style: none;
+    padding-left: 0;
+    color: red;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.flash-messages li {
+    margin-bottom: 5px;
+}
+
+.profile-form {
+    width: 100%;
+}
+
+.form-group {
+    margin-bottom: 25px;
+    position: relative;
+    width: 100%;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 4px;
+    border: none;
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    font-size: 1em;
+    outline: none;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.form-group input:focus {
+    background-color: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 0 8px #28a745;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    width: 100%;
+}
+
+.btn {
+    height: 40px;
+    width: 48%;
+    border-radius: 15px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s;
+}
+
+.btn-update {
+    background-color: #28a745;
+    color: white;
+}
+
+.btn-update:hover {
+    background-color: #218838;
+}
+
+.btn-reset {
+    background-color: #dc3545;
+    color: white;
+}
+
+.btn-reset:hover {
+    background-color: #c82333;
+}
+
+.home-link {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    padding: 10px 25px;
+    background-color: #fbff00; /* Yellow */
+    color: #000;
+    font-weight: 600;
+    border-radius: 25px;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #e0e200;
+    text-decoration: underline;
+}

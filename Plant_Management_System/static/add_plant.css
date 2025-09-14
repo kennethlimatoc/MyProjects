@@ -1,0 +1,111 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://help.gardeningexpress.co.uk/wp-content/uploads/2023/04/Untitled-design-1-1024x576.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 230px 4px;
+    padding-left: 300px;
+    padding-right: 300px;
+
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.318);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+h1 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+    color: #000000;
+}
+
+input[type="text"],
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #bbb;
+    border-radius: 6px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+textarea:focus {
+    border-color: #4caf50;
+    outline: none;
+}
+
+.form-actions {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 25px;
+}
+
+.btn {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.btn-submit {
+    background-color: #4caf50;
+    color: #fff;
+}
+
+.btn-submit:hover {
+    background-color: #43a047;
+}
+
+.btn-reset {
+    background-color: #f44336;
+    color: rgb(251, 251, 251);
+    text-decoration: none;
+}
+
+.btn-reset:hover {
+    background-color: #e53935;
+}
+
+.home-link {
+    display: block;
+    width: fit-content;
+    margin: 30px auto 0;
+    text-align: center;
+    text-decoration: none;
+    color: #000000;
+    font-weight: bold;
+    background-color: #ffeb3b;
+    padding: 10px 20px;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+}
+
+
+.home-link:hover {
+    text-decoration: underline;
+    background-color: #fdd835; 
+}

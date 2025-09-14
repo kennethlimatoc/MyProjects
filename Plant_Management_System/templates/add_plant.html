@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add a Plant</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='add_plant.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h2>Add a Plant</h2>
+
+
+        <form action="/add" method="POST">
+            <div class="form-group">
+                <label>Plant Name:</label>
+                <input type="text" name="plant_name" required>
+            </div>
+
+            <div class="form-group">
+                <label>Plant Type:</label>
+                <input type="text" name="plant_type" required>
+            </div>
+
+            <div class="form-group">
+                <label>Tools and Materials:</label>
+                <textarea name="tools_and_materials" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Plant Components:</label>
+                <textarea name="plants_component" rows="4" required></textarea>
+            </div>
+
+            <div class="form-group">
+                <label>Procedure:</label>
+                <textarea name="procedure" rows="6" required></textarea>
+            </div>
+
+            <div class="form-actions">
+                <input type="submit" value="Add Plant" class="btn btn-submit">
+                <input type="reset" value="Reset" class="btn btn-reset">
+            </div>
+        </form>
+
+        <a href="/home" class="home-link">Return to Home</a>
+    </div>
+
+    <canvas id="canvas"></canvas>
+    {% block content %}{% endblock %}
+    <script src="{{ url_for('static', filename='Effect.js') }}"></script>
+</body>
+</html>

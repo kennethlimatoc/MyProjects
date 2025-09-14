@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Login</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='login.css') }}">
+</head>
+<body>
+   <canvas id="canvas"></canvas>
+
+<section>
+  <div class="form-box">
+    <form action="/login" method="POST">
+      <h2>Login</h2>
+
+      {% with messages = get_flashed_messages(category_filter=["login_error"]) %}
+        {% if messages %}
+          <ul style="color:red;">
+            {% for message in messages %}
+              <li>{{ message }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+      {% endwith %}
+
+      <div class="inputbox">
+        <ion-icon name="person-outline"></ion-icon>
+        <input type="text" name="username" required>
+        <label>Username</label>
+      </div>
+
+      <div class="inputbox">
+        <ion-icon name="lock-closed-outline"></ion-icon>
+        <input type="password" name="password" required>
+        <label>Password</label>
+      </div>
+
+      <div class="forget">
+        <label><input type="checkbox"> Remember Me</label>
+        <label><a href="#">Forgot Password?</a></label>
+      </div>
+
+      <button type="submit">Login</button>
+
+      <div class="register">
+        <p>Not a user? <a href="/register">Register here</a></p>
+      </div>
+    </form>
+  </div>
+</section>
+
+
+
+</body>
+</html>

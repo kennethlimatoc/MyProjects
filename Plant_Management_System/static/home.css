@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://help.gardeningexpress.co.uk/wp-content/uploads/2023/04/Untitled-design-1-1024x576.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 230px 4px;
+    padding-left: 300px;
+    padding-right: 300px;
+
+}
+
+
+.container {
+    width: 90%;
+    max-width: 800px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.318);
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: #000000;
+    margin-bottom: 24px;
+}
+
+/* Button styling (reused from add_plant.css) */
+.btn {
+    font-size: 16px;
+    cursor: pointer;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    background-color: #4caf50; /* Green background */
+    color: white;
+}
+
+.btn:hover {
+    background-color: #43a047; /* Darker green on hover */
+}
+
+
+.btn-yellow {
+    background-color: #fdd835;
+    color: #000;
+}
+
+.btn-yellow:hover {
+    background-color: #fbc02d;
+}
+
+.btn-red {
+    background-color: #f44336;
+    color: white;
+}
+
+.btn-red:hover {
+    background-color: #e53935;
+}
+
+.btn-green {
+    background-color: #4caf50;
+    color: white;
+}
+
+.btn-green:hover {
+    background-color: #43a047;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color:rgba(255, 255, 255, 0.318);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 15px;
+    text-align: center;  /* <--- Center alignment for headers and cells */
+}
+
+
+.logout {
+    margin-top: 30px;
+    text-align: center;
+}
+
+.btn-blue {
+    background-color: #2196f3;
+    color: white;
+}
+
+.btn-blue:hover {
+    background-color: #1976d2;
+}
+
+td .btn {
+    margin-right: 5px;
+}
+
