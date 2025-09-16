@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href = "{{url_for('static',filename='style.css')}}">
+</head>
+<body>
+    <form method="POST" action="/display_text">
+        <img src="{{ url_for('static', filename='boss.jpg') }}" width="100px" height="100px"><br>
+    
+        <label>
+            Enter your name: <input type="text" name="txt-name"><br>
+            Enter your age: <input type="text" name="txt-age"><br>
+        </label>
+        <label>
+            <input type="submit" name="btn-submit"  value="send">
+        </label>
+    </form>
+</body>
+</html>
