@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Story info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="display-container">
+        <h1>{{ title }}</h1>
+        <h3>{{ author }}</h3>
+        <h4>{{ year }}</h4>
+        <p>{{ plot }}</p>
+        <a href="/" class="back-link">Return to Homepage</a>
+    </div>
+</body>
+
+</html>

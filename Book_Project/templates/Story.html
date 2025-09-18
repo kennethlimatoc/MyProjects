@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add a Story</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <h1>A book creator</h1>
+    <form action="/display_text" method="POST">
+        <label>Story Title:</label><br>
+        <input type="text" name="title" required><br><br>
+
+        <label>Author:</label><br>
+        <input type="text" name="author" required><br><br>
+
+        <label>Year Published:</label><br>
+        <input type="number" name="year" min="0" required><br><br>
+
+        <label>Story Plot:</label><br>
+        <textarea name="plot" rows="8" cols="40" required></textarea><br><br>
+
+        <div class="button-group">
+            <input type="submit" value="Save">
+            <input type="reset" value="Reset">
+        </div>
+        
+    </form>
+</body>
+</html>
